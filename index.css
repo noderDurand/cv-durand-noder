@@ -1,0 +1,154 @@
+/* Estilos básicos para que se vea limpio */
+html {
+    scroll-behavior: smooth;
+}
+
+.menu-navegacion {
+    text-align: right; /* Cambiá esto para mover los links */
+    background-color: #2c3e50;
+}
+
+.menu-navegacion a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-weight: bold;
+    transition: color 0.3s; /* Animación suave al pasar el mouse */
+}
+
+.menu-navegacion a:hover {
+    color: #1abc9c;
+}
+
+/* Espaciado para que el menú no tape los títulos al llegar */
+section {
+    padding-top: 80px; 
+    margin-bottom: 40px;
+    max-width: 800px;
+    margin-left: 20px;
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    margin: 0;
+    background-color: #f0f0f0;
+    color: #333;
+}
+h1, h2, h3 {
+    font-family: 'Montserrat',sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.texto-presentacion h1 {
+    font-size: 2.2rem;
+    margin-bottom: 5px;
+}
+
+/* Estilo para los links del menú */
+.menu-navegacion a {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    text-transform: none; /* Que respete mayúsculas y minúsculas */
+}
+
+/* Estilo para el texto pequeño de la universidad */
+small {
+    font-weight: 300;
+    font-style: italic;
+    opacity: 0.9;
+}
+.barra-superior {
+    background-color: #2c3e50;
+    color: white;
+    padding: 15px 0;
+}
+
+/* Esta es la clave para la foto a la izquierda */
+.contenido-encabezado {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* ESTO ES CLAVE: Empuja el menú a la derecha y el nombre a la izquierda */
+    max-width: 1000px;      /* Aumentamos el ancho para que entre todo */
+    margin: 0;         /* Centramos el bloque en la pantalla */
+    padding: 0 20px;
+}
+
+.foto-perfil {
+    width: 90px;
+    height: 120px;
+    border-radius: 0%;    /* La hace circular */
+    border: 1px solid white;
+    margin-right: 10px;    /* Separa la foto del texto */
+    object-fit: cover;     /* Evita que la foto se deforme */
+}
+
+.texto-presentacion h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+/* Estilo para los proyectos que haremos con JS */
+.tarjeta {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    max-width: 800px;
+    border-left: 5px solid #2c3e50;
+}
+
+.contenedor-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Hace que sean responsive */
+    gap: 20px;
+    padding: 20px 0;
+}
+
+/* La tarjeta individual */
+.tarjeta-trabajo {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    display: flex; /* Alinea imagen y texto horizontalmente */
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+    border: 1px solid #ddd;
+}
+
+.tarjeta-trabajo:hover {
+    transform: translateY(-5px); /* Efecto de levante al pasar el mouse */
+}
+
+/* Espacio para la imagen */
+.tarjeta-imagen {
+    background-color: #f9f9f9;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tarjeta-imagen img {
+    width: 150px; /* Tamaño del logo */
+    height: 100px;
+}
+
+/* Espacio para el texto */
+.tarjeta-info {
+    padding: 15px;
+}
+
+.tarjeta-info h3 {
+    margin: 0 0 10px 0;
+    color: #2c3e50;
+}
+
+.tarjeta-info p {
+    margin: 0;
+    font-size: 0.9rem;
+    color: #555;
+}
