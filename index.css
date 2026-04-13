@@ -1,23 +1,42 @@
-/* Estilos básicos para que se vea limpio */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('./assets/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Roboto';
+    src: url('./assets/fonts/Inter/Inter-Regular.ttf') format('truetype'); /* Usamos Inter como reemplazo de Roboto según tu carpeta */
+    font-weight: 400;
+    font-style: normal;
+}
 html {
     scroll-behavior: smooth;
 }
-
+:root {
+    --color-principal: #2c3e50;
+    --color-acento: #1abc9c;
+    --fuente-titulos: 'Montserrat', sans-serif;
+}
 .menu-navegacion {
     text-align: right; /* Cambiá esto para mover los links */
     background-color: #2c3e50;
 }
 
+/* Estilos generales de los links del menú */
 .menu-navegacion a {
-    color: white;
+    color: white !important; 
     text-decoration: none;
     margin: 0 20px;
     font-weight: bold;
-    transition: color 0.3s; /* Animación suave al pasar el mouse */
+    font-family: var(--fuente-titulos);
+    font-size: 0.9rem;
+    transition: color 0.3s ease; 
 }
 
+/* EFECTO HOVER: Cambia el color al pasar el mouse */
 .menu-navegacion a:hover {
-    color: #1abc9c;
+    color: var(--color-acento) !important;
 }
 
 /* Espaciado para que el menú no tape los títulos al llegar */
@@ -52,10 +71,9 @@ h1, h2, h3 {
 .menu-navegacion a {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
-    text-transform: none; /* Que respete mayúsculas y minúsculas */
+    text-transform: none; 
 }
 
-/* Estilo para el texto pequeño de la universidad */
 small {
     font-weight: 300;
     font-style: italic;
@@ -71,8 +89,8 @@ small {
 .contenido-encabezado {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* ESTO ES CLAVE: Empuja el menú a la derecha y el nombre a la izquierda */
-    max-width: 1000px;      /* Aumentamos el ancho para que entre todo */
+    justify-content: space-between; 
+    max-width: 1200px;      
     margin: 0;         /* Centramos el bloque en la pantalla */
     padding: 0 20px;
 }
@@ -83,7 +101,7 @@ small {
     border-radius: 0%;    /* La hace circular */
     border: 1px solid white;
     margin-right: 10px;    /* Separa la foto del texto */
-    object-fit: cover;     /* Evita que la foto se deforme */
+    object-fit: cover;    
 }
 
 .texto-presentacion h1 {
@@ -91,7 +109,6 @@ small {
     font-size: 2rem;
 }
 
-/* Estilo para los proyectos que haremos con JS */
 .tarjeta {
     background: white;
     margin: 20px auto;
@@ -112,7 +129,7 @@ small {
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
-    display: flex; /* Alinea imagen y texto horizontalmente */
+    display: flex; 
     align-items: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
     transition: transform 0.3s;
@@ -120,7 +137,7 @@ small {
 }
 
 .tarjeta-trabajo:hover {
-    transform: translateY(-5px); /* Efecto de levante al pasar el mouse */
+    transform: translateY(-5px); 
 }
 
 /* Espacio para la imagen */
@@ -151,4 +168,130 @@ small {
     margin: 0;
     font-size: 0.9rem;
     color: #555;
+}
+
+
+#contacto {
+    padding-bottom: 60px;
+}
+
+#formulario-contacto {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
+    max-width: 600px; 
+    margin: 30px 0; 
+    border-top: 5px solid var(--color-principal); 
+    margin-top: 20px;
+}
+
+/* Estilo para las etiquetas (labels) */
+#formulario-contacto label {
+    font-family: var(--fuente-titulos);
+    font-size: 0.9rem;
+    color: #555;
+    font-weight: bold;
+    margin-bottom: 8px;
+    display: block; 
+}
+
+/* Estilo para los campos de entrada (inputs y textarea) */
+#formulario-contacto input, 
+
+#formulario-contacto textarea {
+    width: 100%; 
+    padding: 12px;
+    margin-bottom: 20px; 
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s; 
+    box-sizing: border-box; 
+}
+
+/* Efecto al hacer clic (focus) en un campo */
+#formulario-contacto input:focus, 
+#formulario-contacto textarea:focus {
+    outline: none; 
+    border-color: var(--color-acento); 
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.3); 
+}
+
+/* Estilo para el botón de Enviar del formulario */
+#formulario-contacto button {
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-family: var(--fuente-titulos);
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#formulario-contacto button:hover {
+    background-color: var(--color-acento); 
+}
+
+#btn-subir {
+    display: none; 
+    position: fixed; 
+    bottom: 20px; 
+    right: 20px; 
+    background-color: var(--color-principal);
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    border-radius: 50px; /* Bordes redondeados */
+    font-family: var(--fuente-titulos);
+    font-size: 0.9rem;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    z-index: 100; 
+    transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
+    opacity: 0.8; 
+}
+
+#btn-subir:hover {
+    background-color: var(--color-acento);
+    opacity: 1; /* Totalmente opaco al pasar el mouse */
+    transform: translateY(-3px); /* Pequeño efecto de levante */
+}
+
+/* Media Query para celulares (pantallas menores a 768px) */
+@media (max-width: 768px) {
+    .contenido-encabezado {
+        flex-direction: column; 
+        text-align: center;
+    }
+
+    .foto-perfil {
+        margin-right: 0;
+        margin-bottom: 15px;
+    }
+
+    .menu-navegacion {
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .menu-navegacion a {
+        display: block; 
+        margin: 10px 0;
+    }
+
+    section {
+        margin-left: 10px;
+        margin-right: 10px;
+        padding-top: 40px; 
+    }
+
+    .tarjeta-trabajo {
+        flex-direction: column; 
+        text-align: center;
+    }
 }
