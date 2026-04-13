@@ -5,7 +5,7 @@
     <title>CV-Web</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" href="index.css">
 </head>
@@ -14,14 +14,14 @@
     <header class="barra-superior">
         
         <div class="contenido-encabezado">
-            <img src="images/foto.png" alt="Mi Foto" class="foto-perfil">
+            <img src="images/foto.jpg" alt="Mi Foto" class="foto-perfil">
             <div class="texto-presentacion">
-                <h1>Noder Durand</h1>
-                <p>Estudiante de Programación</p>
-                <small>Universidad Tecnologica Nacional</small>
+                <h1>Faustino Albarez</h1>
+                <small>Ingeniero en Sistemas | Programador Freelance</small>
             </div>
             <nav class="menu-navegacion">
                 <a href="#sobre-mi">Sobre mí</a>
+                <a href="#experiencia">Experiencia</a> 
                 <a href="#educacion">Educación</a>
                 <a href="#proyectos">Habilidades</a>
                 <a href="#contacto">Contacto</a>
@@ -34,10 +34,43 @@
     <main>
         <section id="sobre-mi">
             <h2>Sobre mí</h2>
-            <p>Soy estudiante Universitario, tengo 19 años.
-                Estoy interesado en el estudio de programación e ingenieria.
-                Considero que soy una persona proactiva y con buena predisposición para aprender.
+            <p>Apasionado por la tecnología y la arquitectura de software, soy Ingeniero en Sistemas y Técnico en Programación. 
+               Actualmente explora el mundo Freelance , diseñando sistemas web eficientes y personalizados.
+               Mi objetivo es aplicar mis conocimientos técnicos en Python y SQL para ayudar a empresas y emprendedores a potenciar su presencia digital.
             </p>
+        </section>
+
+        <section id="experiencia">
+            <h2>Experiencia Laboral</h2>
+            <div class="contenedor-tarjetas">
+                <div class="tarjeta-trabajo">
+                    <div class="tarjeta-imagen">
+                    <img src="images/experiencia_1.jpg" alt="Logo Empresa">
+                </div>
+                <div class="tarjeta-info">
+                    <h3>Desarrollador Trainee</h3>
+                    <p><strong>Empresa:</strong> <a href="https://www.google.com" target="_blank">Tech Solutions S.A.</a></p>
+                    <p>Desarrollo de interfaces modernas y mantenimiento de bases de datos SQL.</p>
+                    <p>📧 Mail: 
+                        <a href="mailto:rrhh@techsolutions.com">rrhh@techsolutions.com</a>
+                    </p>
+                </div>
+            </div>
+            </div>
+            <div class="tarjeta-trabajo">
+                <div class="tarjeta-imagen">
+                    <img src="images/experiencia_2.jpg" alt="Freelance Developer">
+                </div>
+            <div class="tarjeta-info">
+                <h3>Programador Fullstack Freelance</h3>
+                <p><strong>Plataforma principal:</strong> <a href="https://www.workana.com" target="_blank">Workana / Upwork</a></p>
+                <p>Desarrollo de sitios web personalizados y aplicaciones con Django para clientes de Latinoamérica.</p>
+                <p>📩 Consultas comerciales: 
+                    <a href="mailto:noderdurand12@gmail.com">faustinoalb12@gmail.com</a>
+                </p>
+            </div>
+            </div>
+
         </section>
 
         <section id="educacion">
@@ -62,7 +95,7 @@
                     </div>
                     <div class="tarjeta-info">
                         <h3>Universidad Tecnologica Nacional La Plata</h3>
-                        <p>Cursando Actualmente.</p>
+                        <p>Titulo: Ing.Sitemas. | Tecnico en Programacion.</p>
                     </div>
                 </div>
             </div>
@@ -122,8 +155,8 @@
     <h2>Contacto</h2>
 
     <p>📧 Email: 
-        <a href="mailto:noderdurand@gmail.com">
-            noderdurand12@gmail.com
+        <a href="mailto:faustinoalb12@gmail.com">
+            faustinoalb12@gmail.com
         </a>
     </p>
 
@@ -132,10 +165,25 @@
             github.com/noderdurand
         </a>
     </p>
-
     <p>📍 Ubicación: La Plata, Buenos Aires</p>
-</section>
 
+    <form id="formulario-contacto" style="margin-top: 20px;">
+        <label for="nombre">Nombre:</label><br>
+        <input type="text" id="nombre" name="nombre" required><br><br>
+    
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+    
+        <label for="mensaje">Mensaje:</label><br>
+        <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br><br>
+    
+        <button type="submit">Enviar Mensaje</button>
+    </form>
+
+        </section>
+    
+    <button id="btn-subir" title="Volver al inicio">↑ Volver</button>
+    
     <script src="logica.js"></script>
 </body>
 </html>

@@ -1,5 +1,3 @@
-// 1. Efecto de "Scroll Revelador"
-// Hace que las secciones aparezcan suavemente cuando el usuario baja con el scroll
 const observarSecciones = () => {
     const secciones = document.querySelectorAll('section');
     
@@ -26,7 +24,6 @@ const observarSecciones = () => {
 };
 
 // 2. Validación simple del enlace de Email
-// Muestra un mensaje en consola cuando alguien hace clic en el contacto
 const configurarContacto = () => {
     const linkEmail = document.querySelector('a[href^="mailto:"]');
     if (linkEmail) {
@@ -37,7 +34,6 @@ const configurarContacto = () => {
 };
 
 // 3. Resaltar la opción del menú según donde estemos
-// (Opcional pero muy pro)
 window.addEventListener('scroll', () => {
     let scrollPos = window.scrollY;
     const links = document.querySelectorAll('.menu-navegacion a');
@@ -48,7 +44,7 @@ window.addEventListener('scroll', () => {
             seccion.offsetTop <= scrollPos + 100 &&
             seccion.offsetTop + seccion.offsetHeight > scrollPos + 100
         ) {
-            link.style.color = "#1abc9c"; // Color activo
+            link.style.color = "#1abc9c"; 
         } else {
             link.style.color = "white";
         }
@@ -60,4 +56,32 @@ document.addEventListener('DOMContentLoaded', () => {
     observarSecciones();
     configurarContacto();
     console.log("Currículum de Noder Durand cargado correctamente.");
+});
+
+// Función para el botón "Volver arriba"
+const configurarBotonSubir = () => {
+    const btn = document.getElementById("btn-subir");
+
+    // Mostramos/Ocultamos el botón según el scroll
+    window.addEventListener('scroll', () => {
+        if (window.scrollY > 300) { // Si bajó más de 300px
+            btn.style.display = "block";
+            // Un pequeño delay para que la opacidad funcione
+            setTimeout(() => btn.style.opacity = "1", 10);
+        } else {
+            btn.style.opacity = "0";
+            // Ocultamos después de la animación
+            setTimeout(() => btn.style.display = "none", 300);
+        }
+    });
+
+    btn.addEventListener('click', () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+};
+
+document.addEventListener('DOMContentLoaded', () => {
+    observarSecciones();
+    configurarContacto();
+    configurarBotonSubir(); // <--- Llamada nueva
 });
