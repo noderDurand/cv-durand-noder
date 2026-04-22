@@ -171,6 +171,7 @@ small {
     max-width: 600px; 
     margin: 30px 0; 
     border-top: 5px solid var(--color-principal); 
+    margin-top: 20px;
 }
 
 /* Estilo para las etiquetas (labels) */
