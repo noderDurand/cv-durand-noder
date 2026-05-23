@@ -6,13 +6,13 @@ html {
     --color-acento: #1abc9c;
     --fuente-titulos: 'Montserrat', sans-serif;
 }
-.menu-navegacion {
+.menu-navegation {
     text-align: right; /* Cambiá esto para mover los links */
     background-color: #2c3e50;
 }
 
 /* Estilos generales de los links del menú */
-.menu-navegacion a {
+.menu-navegation a {
     color: white !important; 
     text-decoration: none;
     margin: 0 20px;
@@ -23,7 +23,7 @@ html {
 }
 
 /* EFECTO HOVER: Cambia el color al pasar el mouse */
-.menu-navegacion a:hover {
+.menu-navegation a:hover {
     color: var(--color-acento) !important;
 }
 
@@ -50,13 +50,13 @@ h1, h2, h3 {
     letter-spacing: 1px;
 }
 
-.texto-presentacion h1 {
+.text-presentation h1 {
     font-size: 2.2rem;
     margin-bottom: 5px;
 }
 
 /* Estilo para los links del menú */
-.menu-navegacion a {
+.menu-navegation a {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.9rem;
     text-transform: none; 
@@ -67,14 +67,14 @@ small {
     font-style: italic;
     opacity: 0.9;
 }
-.barra-superior {
+.upper-bar {
     background-color: #2c3e50;
     color: white;
     padding: 15px 0;
 }
 
 /* Esta es la clave para la foto a la izquierda */
-.contenido-encabezado {
+.content-header {
     display: flex;
     align-items: center;
     justify-content: space-between; 
@@ -83,7 +83,7 @@ small {
     padding: 0 20px;
 }
 
-.foto-perfil {
+.profile-photo {
     width: 90px;
     height: 120px;
     border-radius: 0%;    /* La hace circular */
@@ -92,7 +92,7 @@ small {
     object-fit: cover;    
 }
 
-.texto-presentacion h1 {
+.text-presentation h1 {
     margin: 0;
     font-size: 2rem;
 }
@@ -105,7 +105,7 @@ small {
     border-left: 5px solid #2c3e50;
 }
 
-.contenedor-tarjetas {
+.container-cards {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Hace que sean responsive */
     gap: 20px;
@@ -113,7 +113,7 @@ small {
 }
 
 /* La tarjeta individual */
-.tarjeta-trabajo {
+.job-card {
     background-color: white;
     border-radius: 8px;
     overflow: hidden;
@@ -124,12 +124,12 @@ small {
     border: 1px solid #ddd;
 }
 
-.tarjeta-trabajo:hover {
+.job-card:hover {
     transform: translateY(-5px); 
 }
 
 /* Espacio para la imagen */
-.tarjeta-imagen {
+.image-card {
     background-color: #f9f9f9;
     padding: 20px;
     display: flex;
@@ -137,33 +137,33 @@ small {
     align-items: center;
 }
 
-.tarjeta-imagen img {
+.image-card img {
     width: 150px; /* Tamaño del logo */
     height: 100px;
 }
 
 /* Espacio para el texto */
-.tarjeta-info {
+.info-card {
     padding: 15px;
 }
 
-.tarjeta-info h3 {
+.info-card h3 {
     margin: 0 0 10px 0;
     color: #2c3e50;
 }
 
-.tarjeta-info p {
+.info-card p {
     margin: 0;
     font-size: 0.9rem;
     color: #555;
 }
 
 
-#contacto {
+#contact {
     padding-bottom: 60px;
 }
 
-#formulario-contacto {
+#contact-form {
     background-color: white;
     padding: 30px;
     border-radius: 8px;
@@ -174,7 +174,7 @@ small {
 }
 
 /* Estilo para las etiquetas (labels) */
-#formulario-contacto label {
+#contact-form label {
     font-family: var(--fuente-titulos);
     font-size: 0.9rem;
     color: #555;
@@ -184,9 +184,9 @@ small {
 }
 
 /* Estilo para los campos de entrada (inputs y textarea) */
-#formulario-contacto input, 
+#contact-form input, 
 
-#formulario-contacto textarea {
+#contact-form textarea {
     width: 100%; 
     padding: 12px;
     margin-bottom: 20px; 
@@ -199,15 +199,15 @@ small {
 }
 
 /* Efecto al hacer clic (focus) en un campo */
-#formulario-contacto input:focus, 
-#formulario-contacto textarea:focus {
+#contact-form input:focus, 
+#contact-form textarea:focus {
     outline: none; 
     border-color: var(--color-acento); 
     box-shadow: 0 0 5px rgba(26, 188, 156, 0.3); 
 }
 
 /* Estilo para el botón de Enviar del formulario */
-#formulario-contacto button {
+#contact-form button {
     background-color: var(--color-principal);
     color: white;
     border: none;
@@ -220,11 +220,11 @@ small {
     transition: background-color 0.3s;
 }
 
-#formulario-contacto button:hover {
+#contact-form button:hover {
     background-color: var(--color-acento); 
 }
 
-#btn-subir {
+#btn-up {
     display: none; 
     position: fixed; 
     bottom: 20px; 
@@ -243,7 +243,7 @@ small {
     opacity: 0.8; 
 }
 
-#btn-subir:hover {
+#btn-up:hover {
     background-color: var(--color-acento);
     opacity: 1; /* Totalmente opaco al pasar el mouse */
     transform: translateY(-3px); /* Pequeño efecto de levante */
@@ -251,22 +251,22 @@ small {
 
 /* Media Query para celulares (pantallas menores a 768px) */
 @media (max-width: 768px) {
-    .contenido-encabezado {
+    .content-header {
         flex-direction: column; 
         text-align: center;
     }
 
-    .foto-perfil {
+    .profile-photo {
         margin-right: 0;
         margin-bottom: 15px;
     }
 
-    .menu-navegacion {
+    .menu-navegation {
         text-align: center;
         margin-top: 20px;
     }
 
-    .menu-navegacion a {
+    .menu-navegation a {
         display: block; 
         margin: 10px 0;
     }
@@ -277,7 +277,7 @@ small {
         padding-top: 40px; 
     }
 
-    .tarjeta-trabajo {
+    .job-card {
         flex-direction: column; 
         text-align: center;
     }
