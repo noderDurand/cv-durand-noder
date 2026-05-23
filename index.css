@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat/Montserrat-Bold.ttf') format('truetype');
+  font-weight: 700; /* 700 porque el archivo que tenés es Bold */
+  font-style: normal;
+}
 html {
     scroll-behavior: smooth;
 }
@@ -37,7 +43,7 @@ section {
 }
 
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     margin: 0;
     background-color: #f0f0f0;
