@@ -15,7 +15,7 @@ html {
 .menu-navegacion a {
     color: white !important; 
     text-decoration: none;
-    margin: 0 20px;
+    margin: 0 1.25rem;
     font-weight: bold;
     font-family: var(--fuente-titulos);
     font-size: 0.9rem;
@@ -47,12 +47,12 @@ h1, h2, h3 {
     font-family: 'Montserrat',sans-serif;
     font-weight: 700;
     text-transform: uppercase;
-    letter-spacing: 1px;
+    letter-spacing: 0.0625rem;
 }
 
 .texto-presentacion h1 {
     font-size: 2.2rem;
-    margin-bottom: 5px;
+    margin-bottom: 0.3125rem;
 }
 
 /* Estilo para los links del menú */
@@ -70,7 +70,7 @@ small {
 .barra-superior {
     background-color: #2c3e50;
     color: white;
-    padding: 15px 0;
+    padding: 1rem 0;
 }
 
 /* Esta es la clave para la foto a la izquierda */
@@ -78,17 +78,17 @@ small {
     display: flex;
     align-items: center;
     justify-content: space-between; 
-    max-width: 1200px;      
+    max-width: 75rem;      
     margin: 0;         /* Centramos el bloque en la pantalla */
-    padding: 0 20px;
+    padding: 0 1.25rem;
 }
 
 .foto-perfil {
-    width: 90px;
-    height: 120px;
+    width: 5.625rem;
+    height: 7.5rem;
     border-radius: 0%;    /* La hace circular */
-    border: 1px solid white;
-    margin-right: 10px;    /* Separa la foto del texto */
+    border: 0.0625rem solid white;
+    margin-right: 0.625rem;    /* Separa la foto del texto */
     object-fit: cover;    
 }
 
@@ -99,56 +99,56 @@ small {
 
 .tarjeta {
     background: white;
-    margin: 20px auto;
-    padding: 20px;
-    max-width: 800px;
-    border-left: 5px solid #2c3e50;
+    margin: 1.25rem auto;
+    padding: 1.25rem;
+    max-width: 50rem;
+    border-left: 0.3125rem solid #2c3e50;
 }
 
 .contenedor-tarjetas {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Hace que sean responsive */
-    gap: 20px;
-    padding: 20px 0;
+    grid-template-columns: repeat(auto-fit, minmax(18.75rem, 1fr)); /* Hace que sean responsive */
+    gap: 1.25rem;
+    padding: 1.25rem 0;
 }
 
 /* La tarjeta individual */
 .tarjeta-trabajo {
     background-color: white;
-    border-radius: 8px;
+    border-radius: 0.5rem;
     overflow: hidden;
     display: flex; 
     align-items: center;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
     transition: transform 0.3s;
-    border: 1px solid #ddd;
+    border: 0.0625rem solid #ddd;
 }
 
 .tarjeta-trabajo:hover {
-    transform: translateY(-5px); 
+    transform: translateY(-0.3125rem); 
 }
 
 /* Espacio para la imagen */
 .tarjeta-imagen {
     background-color: #f9f9f9;
-    padding: 20px;
+    padding: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
 .tarjeta-imagen img {
-    width: 150px; /* Tamaño del logo */
-    height: 100px;
+    width: 9rem; /* Tamaño del logo */
+    height: 6.25rem;
 }
 
 /* Espacio para el texto */
 .tarjeta-info {
-    padding: 15px;
+    padding: 1rem;
 }
 
 .tarjeta-info h3 {
-    margin: 0 0 10px 0;
+    margin: 0 0 0.625rem 0;
     color: #2c3e50;
 }
 
@@ -160,17 +160,17 @@ small {
 
 
 #contacto {
-    padding-bottom: 60px;
+    padding-bottom: 3.75rem;
 }
 
 #formulario-contacto {
     background-color: white;
-    padding: 30px;
-    border-radius: 8px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1); 
-    max-width: 600px; 
-    margin: 30px 0; 
-    border-top: 5px solid var(--color-principal); 
+    padding: 1.875rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 1rem rgba(0,0,0,0.1); 
+    max-width: 37.5rem; 
+    margin: 2rem 0; 
+    border-top: 0.25rem solid var(--color-principal);
 }
 
 /* Estilo para las etiquetas (labels) */
@@ -179,7 +179,7 @@ small {
     font-size: 0.9rem;
     color: #555;
     font-weight: bold;
-    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
     display: block; 
 }
 
@@ -188,10 +188,10 @@ small {
 
 #formulario-contacto textarea {
     width: 100%; 
-    padding: 12px;
-    margin-bottom: 20px; 
-    border: 1px solid #ddd;
-    border-radius: 4px;
+    padding: 0.75rem;
+    margin-bottom: 1.25rem; 
+    border: 0.0625rem solid #ddd;
+    border-radius: 0.25rem;
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     transition: border-color 0.3s, box-shadow 0.3s; 
@@ -203,7 +203,7 @@ small {
 #formulario-contacto textarea:focus {
     outline: none; 
     border-color: var(--color-acento); 
-    box-shadow: 0 0 5px rgba(26, 188, 156, 0.3); 
+    box-shadow: 0 0 0.25rem rgba(26, 188, 156, 0.3); 
 }
 
 /* Estilo para el botón de Enviar del formulario */
@@ -211,11 +211,11 @@ small {
     background-color: var(--color-principal);
     color: white;
     border: none;
-    padding: 12px 24px;
+    padding: 0.75rem 1.5rem;
     font-family: var(--fuente-titulos);
     font-size: 1rem;
     text-transform: uppercase;
-    border-radius: 4px;
+    border-radius: 0.25rem;
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -227,17 +227,17 @@ small {
 #btn-subir {
     display: none; 
     position: fixed; 
-    bottom: 20px; 
-    right: 20px; 
+    bottom: 1.25rem; 
+    right: 1.25rem; 
     background-color: var(--color-principal);
     color: white;
     border: none;
-    padding: 15px 20px;
-    border-radius: 50px; /* Bordes redondeados */
+    padding: 1rem 1.25rem;
+    border-radius: 3.125rem; /* Bordes redondeados */
     font-family: var(--fuente-titulos);
     font-size: 0.9rem;
     cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+    box-shadow: 0 0.25rem 0.625rem rgba(0,0,0,0.2);
     z-index: 100; 
     transition: background-color 0.3s, transform 0.3s, opacity 0.3s;
     opacity: 0.8; 
@@ -246,11 +246,11 @@ small {
 #btn-subir:hover {
     background-color: var(--color-acento);
     opacity: 1; /* Totalmente opaco al pasar el mouse */
-    transform: translateY(-3px); /* Pequeño efecto de levante */
+    transform: translateY(-0.1875rem); /* Pequeño efecto de levante */
 }
 
 /* Media Query para celulares (pantallas menores a 768px) */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
     .contenido-encabezado {
         flex-direction: column; 
         text-align: center;
@@ -258,23 +258,23 @@ small {
 
     .foto-perfil {
         margin-right: 0;
-        margin-bottom: 15px;
+        margin-bottom: 1rem;
     }
 
     .menu-navegacion {
         text-align: center;
-        margin-top: 20px;
+        margin-top: 1.25rem;
     }
 
     .menu-navegacion a {
         display: block; 
-        margin: 10px 0;
+        margin: 0.625rem 0;
     }
 
     section {
-        margin-left: 10px;
-        margin-right: 10px;
-        padding-top: 40px; 
+        margin-left: 0.625rem;
+        margin-right: 0.625rem;
+        padding-top: 2.5rem; 
     }
 
     .tarjeta-trabajo {
