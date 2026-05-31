@@ -1,7 +1,7 @@
-const observarSecciones = () => {
-    const secciones = document.querySelectorAll('section');
+const observerSections = () => {
+    const sections = document.querySelectorAll('section');
     
-    const opciones = {
+    const options = {
         threshold: 0.2 // Se activa cuando el 20% de la sección es visible
     };
 
@@ -12,19 +12,19 @@ const observarSecciones = () => {
                 entry.target.style.transform = "translateY(0)";
             }
         });
-    }, opciones);
+    }, options);
 
-    secciones.forEach(seccion => {
+    sections.forEach(section => {
         // Estilos iniciales antes de que aparezcan
-        seccion.style.opacity = "0";
-        seccion.style.transform = "translateY(20px)";
-        seccion.style.transition = "all 0.6s ease-out";
-        observer.observe(seccion);
+        section.style.opacity = "0";
+        section.style.transform = "translateY(20px)";
+        section.style.transition = "all 0.6s ease-out";
+        observer.observe(section);
     });
 };
 
 // 2. Validación simple del enlace de Email
-const configurarContacto = () => {
+const configureContact = () => {
     const linkEmail = document.querySelector('a[href^="mailto:"]');
     if (linkEmail) {
         linkEmail.addEventListener('click', () => {
@@ -39,10 +39,10 @@ window.addEventListener('scroll', () => {
     const links = document.querySelectorAll('.menu-navegacion a');
 
     links.forEach(link => {
-        const seccion = document.querySelector(link.getAttribute('href'));
+        const section = document.querySelector(link.getAttribute('href'));
         if (
-            seccion.offsetTop <= scrollPos + 100 &&
-            seccion.offsetTop + seccion.offsetHeight > scrollPos + 100
+            section.offsetTop <= scrollPos + 100 &&
+            section.offsetTop + section.offsetHeight > scrollPos + 100
         ) {
             link.style.color = "#1abc9c"; 
         } else {
@@ -53,13 +53,13 @@ window.addEventListener('scroll', () => {
 
 // Ejecutar funciones al cargar la página
 document.addEventListener('DOMContentLoaded', () => {
-    observarSecciones();
-    configurarContacto();
+    observerSections();
+    configureContact();
     console.log("Currículum de Noder Durand cargado correctamente.");
 });
 
 // Función para el botón "Volver arriba"
-const configurarBotonSubir = () => {
+const configureButtonUp = () => {
     const btn = document.getElementById("btn-subir");
 
     // Mostramos/Ocultamos el botón según el scroll
@@ -81,7 +81,7 @@ const configurarBotonSubir = () => {
 };
 
 document.addEventListener('DOMContentLoaded', () => {
-    observarSecciones();
-    configurarContacto();
-    configurarBotonSubir(); // <--- Llamada nueva
+    observerSections();
+    configureContact();
+    configureButtonUp(); // <--- Llamada nueva
 });
